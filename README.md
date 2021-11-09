@@ -28,16 +28,27 @@
 - ASP.NET
 
 - CSS
-
-- JavaScript
 - HTML
 
+- JavaScript
+- Bootstarp
 
- 
+## Screenshots
+![Screenshot (35)](https://user-images.githubusercontent.com/92842316/140867473-270d709c-0606-49cb-8760-3d5ebeed2253.png)
 
 
+![Screenshot (36)](https://user-images.githubusercontent.com/92842316/140867481-37e251af-73f2-4072-82f0-0c1e5d01ecbd.png)
 
- 
+ ![Screenshot (37)](https://user-images.githubusercontent.com/92842316/140867484-d6aaf619-5028-4295-906c-792d4b8630bd.png)
+![Screenshot (39)](https://user-images.githubusercontent.com/92842316/140867489-08643bcb-c40b-481c-ac86-6a9b7f145fc2.png)
+
+
+![Screenshot (40)](https://user-images.githubusercontent.com/92842316/140867502-a98c8132-58b2-4cef-b39b-ac926ac15a1c.png)
+
+
+ ![Screenshot (49)](https://user-images.githubusercontent.com/92842316/140867511-daa140ef-8fa6-4f51-9770-9a5ccfc7d37c.png)
+
+![Screenshot (50)](https://user-images.githubusercontent.com/92842316/140867515-31a24a30-ea1c-4ac1-81f8-5cd8ee1f3b56.png)
 
 
 
