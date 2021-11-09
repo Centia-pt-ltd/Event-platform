@@ -26,9 +26,9 @@
 ## Language
 
 - ASP.NET
-
-- CSS
 - HTML
+- CSS
+
 
 - JavaScript
 - Bootstarp
