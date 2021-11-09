@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+r<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>reception</title>
+
+  <!-- Libraries CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="body_bgov">
+	<div class="reception_bg"></div>
+<div class="advertisement_wrapper">
+  <div class="advertisement1">
+     <div id="demo" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/ad1.jpg" alt="banner">
+    </div>
+    <div class="carousel-item">
+      <img src="img/ad1.jpg" alt="banner">
+    </div>
+    <div class="carousel-item">
+      <img src="img/ad1.jpg" alt="banner">
+    </div>
+    <div class="carousel-item">
+       <img src="img/ad1.jpg" alt="banner">
+     </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<div class="datacontent_logo">
+  
+        
+            <marquee direction="left"behavior="scroll" class="custom-marquee"> 
+              <label class="content" id="lblWelcomeName">   </label>
+            </marquee>
+     
+       
+        <label><img src="img/sublogo.jpg"></label>
+</div>
+
+
+ <!-- Latest compiled and minified CSS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/function.js"></script>
+  <script>
+      $(document).ready(function () {
+          setTimeout(function () {
+              $(".reception_bg").addClass('active');
+          }, 3000);
+          setTimeout(function () {
+              $(".advertisement_wrapper,.datacontent_logo").fadeIn();
+          }, 20000);
+      });
+
+function getURL() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var name = urlParams.get('name');
+    document.getElementById("lblWelcomeName").innerHTML = "Hi " + name + " , welcome to QStudy event. Let me take you to the Auditorium.";
+}
+window.onload = getURL();
+
+function GotoZoom() {
+    setTimeout(function () {
+        window.location.href = "https://kmilab.zoom.us/";
+    }, 31000);
+}
+window.onload = GotoZoom();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageSuperAdmin.master.cs" Inherits="SuperAdmin_MasterPageSuperAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>QStudy</title>
+<script src="jsnew/jquery.min.js"></script>
+    <script src="jsnew/popper.min.js"></script>
+    <script src="jsnew/bootstrap.min.js"></script>
+<!-- Libraries CSS -->
+ <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/all.css" type="text/css" rel="stylesheet" />
+    <link href="css/StyleForTable.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        .my-bordered-icon {
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="overflow:hidden;">
+    <form id="form1" runat="server">
+        <div class="alert alertboxes alert-success d-none" id="divSuccess" role="alert"></div>
+        <div class="alert alertboxes alert-danger d-none"  id="divError" role="alert"></div>
+
+            <div class="container-fluid" onclick="ClearMsg();"">
+        <div class="row">
+<header class="main-header dark">
+    <div class="logo">
+        <img src="img/trans_branding.png" alt="logo" />
+    </div>
+    <div class="nav">
+        <div class="nav-right">
+            <ul class="navright_menu">
+                <li class="login_icon"><a href="javascript:void();" onclick="return SessionLogout();">LogOut<i class="fa fa-sign-out"></i></a></li>
+                <div style="display:none"><asp:Button ID="btnLogOut" runat="server" OnClick="btnLogOut_Click" /></div>
+                <script type="text/javascript">
+                    function SessionLogout() {
+                        var btn = document.getElementById("btnLogOut");
+                        btn.click();
+                    }
+                </script>
+            </ul>
+        </div>
+    </div>
+</header>
+</div>   
+</div>
+<div class="page_wrapper">
+<div class="page_toggal">
+<div class="side_menu_wrapper" style="background-color:white;z-index:999;overflow-y:auto;">
+    <ul>
+        <li id="liDashBoard" runat="server"><a href="Dashboard.aspx"><i class="fa fa-home"></i>Dashboard</a></li>
+        <li id="liRegisterList" runat="server"><a href="RegistrationList.aspx"><i class="fa fa-database"></i>Student center</a></li>
+        <li id="liPartial" runat="server"><a href="PartialData.aspx"><i class="fa fa-table"></i>Partial Data</a></li>
+        <%--<li id="liManageEvent" runat="server"><a href="frmManageEvent.aspx"><i class="fa fa-address-book-o"></i>Manage Event</a></li>--%>  
+             
+        <li id="liUniversityManagent" runat="server"><a href="UniversityManagement.aspx"><i class="fa fa-university"></i>University Manager</a></li>
+        <li id="liManageEvent" runat="server"><a href="EventManagement.aspx"><i class="fa fa-calendar"></i>Event Manager</a></li> 
+        <li id="liBoothManager" runat="server" style="display:none"><a href="BoothManagement.aspx"><i class="fa fa-address-book"></i>Booth Manager</a></li>
+        <li id="liManageUser" runat="server"><a href="frmManageUser.aspx"><i class="fa fa-users"></i>Manage User</a></li> 
+         <%--<li id="liResource" runat="server"><a href="ResourceManagement.aspx"><i class="fa fa-address-book-o"></i>Resource Manager</a></li>--%>               
+        <li id="liLogedInUser" runat="server"><a href="LogedInUsers.aspx"><i class="fa fa-user-circle-o"></i>LogedIn Users</a></li>
+        <li id="liTheme" runat="server" style="display:none"><a href="Theme.aspx"><i class="fa fa-empire"></i>Theme</a></li>
+
+    </ul>
+
+    <div>
+            <table id="tblHighLights" style="font-size:13px !important; background-color:lightcyan !important">
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag my-bordered-icon" aria-hidden="true" style="color:white; font-weight:bold!important"></i></td><td>InActive </td></tr>
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag" aria-hidden="true" style=" color:gray;font-weight:bold!important;"></i></td><td>Active</td></tr>                
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag" aria-hidden="true" style="color:yellow; font-weight:bold!important;"></i></td><td>Spoken or approached </td> </tr>
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag" aria-hidden="true" style="color:green; font-weight:bold!important"></i></td><td>Potential </td></tr>
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag" aria-hidden="true" style="color:blue; font-weight:bold!important"></i></td><td>Signed Up/ Lock </td></tr>
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag" aria-hidden="true" style="color:pink; font-weight:bold!important"></i></td><td>University Spoken </td> </tr> 
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag" aria-hidden="true" style="color:red; font-weight:bold!important"></i></td><td>Lost</td> </tr>              
+                <tr style="font-size:13px !important; background-color:lightcyan !important"><td style="width:20px;"><i class="fa fa-flag" aria-hidden="true" style="color:black; font-weight:bold!important"></i></td><td>Blocked</td>  
+               </tr>
+            </table>
+        </div>
+
+   <!--  <i class="fa fa-angle-double-right closeleft_btn"></i> -->
+</div>
+</div>
+       <div class="all_pages_wrapper" style="max-width:84%">
+
+           
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+       </div>
+</div>
+<script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/function.js"></script>
+
+
+        <script src="../js/comman.js"></script>
+        <script type="text/javascript">
+
+            function ClearMsg() {
+                $("#divSuccess").html('');
+                $("#divError").html('');
+
+                if ($("#divSuccess").hasClass("d-none")) {
+
+                }
+                else {
+                    $("#divSuccess").addClass('d-none');
+                }
+                if ($("#divError").hasClass("d-none")) {
+
+                }
+                else {
+                    $("#divError").addClass('d-none');
+                }
+            }
+
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+   
+    </form>
+</body>
+</html>

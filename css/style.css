@@ -1,0 +1,709 @@
+@import url('./all.css');
+@import url('./owl.carousel.min.css');
+@import url('./owl.theme.green.css');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Pragati Narrow', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+
+/*auditorium css start here*/
+.bg_auditorium{
+    background: url(../img/bg-auditorium.jpg) no-repeat;
+    position: relative;
+    background-size:100% 100%;
+    height: 100vh;
+}
+
+
+
+ /*header css start her*/
+ .regis_section{
+    margin-top: -15px;
+ }
+ .main_header{
+    position: relative;
+    background-color: #f24407;
+    border-radius: 0 0 25px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+   z-index: 99;
+ }
+
+
+.btn-group, .btn-group-vertical {
+    display: block !important;
+    box-shadow: 0 1px 0px #003f88;
+}
+
+.multiselect{
+    border:none !important;
+}
+.btnblue:hover{
+    background-color:#f34507!important;
+}
+
+
+
+
+
+
+ .main_header .main_header_right{
+    background-color:#003F88;
+    padding: 15px;
+    padding-left: 85px;
+    position: relative;
+    transition: width 1s ease;
+    width: 390px;
+ }
+  .main_header.step2 .main_header_right{
+    width: calc(100% - 280px);
+ }
+ .main_header .main_header_right::before{
+    content: '';
+    position: absolute;
+    left: -115px;
+    top: 13px;
+    bottom: 0;
+    background-color: #f34507;
+    width: 180px;
+    transform: scale(1.25) rotate(-125deg);
+}
+
+ .main_header .main_header_left{
+    padding: 15px;
+ }
+.logo{
+    width: 280px;
+    display: block;
+    position: absolute;
+    z-index: 99;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
+  .logo2{
+    display: block;
+    width: 280px;
+    padding:15px;
+    box-sizing:border-box;
+    position: absolute;
+    z-index: 99;
+    left: 20px;
+    top: 57%;
+    transform: translateY(-50%);
+}
+
+.main_header_right h3{
+    font-size: 20px;
+}
+.main_header_right p{
+    font-size: 14px;
+    visibility:hidden;
+}
+.main_header_right h3, p{
+    color: #ffffff;
+    text-align: right;
+    margin: 0;
+    text-transform: capitalize;
+}
+ /*header css end her*/
+.bg_login{
+    background: url(../img/bg_form.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    transition: all 5000ms ease;
+}
+.bg_login.active{
+    transform: scale(5);
+}
+.mform{
+    position: absolute;
+    padding: 0 30px 15px;
+    top: 55%;
+    left: 50%;
+    width: 20%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:#ffffff;
+    opacity: 0.8;
+}
+.radio_buttons span{
+    color: #003F88;
+    font-weight: 600;
+    margin-right: 40px;
+    vertical-align: super;
+    padding-left: 10px;
+}
+.mform h2{
+    font-size:18px;
+    color:#007bff;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.mform .form-control{
+    margin-bottom: 10px;
+    border: 0;
+    box-shadow: 0 1px 0px #003F88;
+   
+}
+.regis_form .form-control{
+    margin-bottom: 10px;
+    border: 0;
+    box-shadow: 0 1px 0px #003F88;
+   
+}
+
+.slect_item{
+    border: 0;
+    box-shadow: 0 1px 0px #003F88;
+    width: 100%;
+    height: 26px;
+    padding: 0px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    position: relative;
+}
+.hhh{
+    position: relative;
+}
+.select_box:after{
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -5px;
+    border-top: 8px solid #003F88;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+.mform,.regis_form label{
+    text-transform: capitalize;
+    color:#003F88;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.regis_form label{
+    margin-bottom: 0;
+    margin-top: 10px;
+    }
+.regis_form input{
+    height: 32px;
+}
+
+.mform .btn{
+    background-color:#003F88!important;
+    color: white;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    margin: 20px auto;
+    padding: 2px!important;
+   
+}
+.regis_form .btnblue{
+    background-color:#003F88!important;
+    color: white;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+}
+
+    .regis_form .btnblue:hover {
+       background-color: #f34507!important
+    }
+
+.back_button{
+   background-color: transparent;
+   width: 100%;
+    color: #003F88;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 3px #003f88;
+}
+.mendet{
+    color: #003F88;
+    font-size: 8px;
+
+}
+.mform .btn .log_text{
+    padding-left: 5px;
+    vertical-align: text-top;
+  
+}
+/*.mform .btn::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 15px;
+    content: "\f023";
+    padding-left: 5px;
+    vertical-align: text-top;
+  }*/
+  .regis_form{
+    padding: 30px 80px;
+    box-sizing: border-box;
+  }
+  .registration_btn{
+    text-decoration: none!important;
+  }
+  .back_bt
+  {
+    background-color: #ffffff!important;
+    color: black;
+    border: 2px solid red;
+  }
+ /*slider css start her*/
+  .carousel-inner img {
+    width: 100%;
+   /* height: 100%;*/
+  }
+  .regis_slider .carousel-item{
+   /*height: 560px;*/ 
+
+  }
+  .carousel-indicators li{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .carousel-indicators .active{
+    background-color: #003F88;
+  }
+/*thank you start here*/
+
+
+.thaks_page{
+    background: url(../img/bg_form.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    background-color: #003F88;
+    z-index: 200;
+    height: 100%;
+    opacity: 0.7;
+}
+.overlay .overlayinbox{
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+.overlayinbox h1{
+    font-size: 115px;
+    color: #ffffff;
+   font-family: auto;
+   font-weight: 600;
+}
+.overlayinbox p{
+    font-size:24px;
+    text-align: center;
+}
+.overlayinbox h1::first-letter {
+  font-size: 100%;
+  color: #f24407;
+  margin: 0;
+  padding: 0;
+}
+.overlayinbox i{
+    font-size: 140px;
+    color: #ffffff;
+    border: 7px solid;
+    border-radius: 50%;
+    padding: 15px;
+}
+ 
+
+/*reception css strat here*/
+.body_bgov{
+    overflow: hidden;
+    background-image: url(../img/bbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.reception_bg{
+    background: url(../img/reception.jpg) no-repeat center top;
+    background-size:auto 100%;
+    height: 100vh;
+    transition: all 20000ms ease;
+}
+.reception_bg.active{
+    transform: scale(1.9);
+}
+.advertisement_wrapper{
+    position: fixed;
+    display:none ;
+    bottom: 72px;
+    width: 184px;
+    left:49.6%;
+    transform: translate(-49.6%);
+    transition: all 1000ms ease;
+}
+
+/*.advertisement_wrapper{
+    position: fixed;
+    display:none ;
+    bottom: 75px;
+    width: 195px;
+    left:49.6%;
+    transform: translate(-49.6%);
+    transition: all 1000ms ease;
+}
+*/
+
+.advertisement1{
+    background-color: gray;
+    width: 100%;
+    overflow: hidden;
+}
+.advertisement1 img{
+    width: 100%;
+}
+.datacontent_logo{
+     position: absolute;
+     display: none;
+    width: 320px;
+    height: 70px;
+    background-color:#ffffff;
+    bottom: 0;
+    left: 49.5%;
+    transform: translate(-49.5%);
+}
+.datacontent_logo .content{
+    float: left;
+    width: 64%;
+    text-align: center;
+    position: 5px;
+    box-sizing: border-box;
+}
+/*logi page video css start here*/
+.bg_login_video{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+.lobby{
+    position: relative;
+}
+.lobbybranding{
+    position: absolute;
+    z-index: 999;
+    left: 7%;
+    top: 0;
+}
+.branding{
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+.lobbybranding img{
+    width: 200px;
+    height: 100px;
+}
+
+.welcom_popup{
+   position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -10%);
+    border-radius: 5px;
+    z-index: 99;
+    padding: 10px;
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform:capitalize;
+    background-color:rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    transition: all .5s ease;
+}
+.welcom_popup_lob{
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -10%);
+    border-radius: 5px;
+    z-index: 99;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform:capitalize;
+    background-color:rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+
+}
+.close_btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 5px;
+    cursor: pointer;
+    font-size: 12px!important;
+}
+.thumnil_links{
+   position: absolute;
+    display: block;
+    z-index: 999999;
+    bottom:0;
+    left: 12%;
+    transform: translate(-50%, -10px);
+}
+.thumnil_links i{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: darkblue;
+    opacity: 0.6;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+/*logi page video css end here*/
+
+@media screen and (max-width: 768px){
+    .advertisement_wrapper{
+    bottom: 76px;
+    width: 197px;
+    left: 47.5%;
+    transform: translate(-47.5%);
+
+}
+.booth_link{
+    height: ;
+}
+    .thumnil_links i{
+    padding: 3px;
+    font-size: 20px;
+    margin: 0 5px;
+}
+    .welcom_popup_lob {
+       bottom: 70%;
+    }
+.branding{
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto 10px;
+}
+.welcom_popup{
+    font-size:14px;
+    top: 35%;
+}
+
+.custom-marquee{
+    color: #f24407;
+    overflow: hidden;
+    width: 65%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Pragati Narrow';
+}
+}
+ /*media css start her*/
+   @media only screen and (max-width: 768px) {
+         .mform, .regis_form label{
+    font-size: 12px;
+  }
+  .univertitext{
+    display: none!important;
+  }
+    .overlayinbox i {
+        font-size: 40px;
+    }
+  .regis_form{
+    padding: 10%!important;
+  }
+  .main_header_left .logo{
+    display: none;
+  }
+  .logo2{
+    display: block;
+    width: 170px;
+  
+    position: absolute;
+    z-index: 99;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  .regis_form input {
+    /*height: 40px;*/
+}
+.slect_item{height: 40px;}
+.main_header.step2 .main_header_right{
+    width:calc(100% - 140px);
+    }
+ .main_header .main_header_right{
+        padding-left: 35px;
+    }
+    .main_header .main_header_right {
+        width: 146px;
+    }
+    .main_header_right h3 {
+    font-size: 16px;
+}
+      .mform{ 
+      width: 65%;
+    }
+    .mform h2{
+    font-size:16px;
+    }
+    .mform .btn{
+        width: auto;
+        font-size: 14px;
+    }
+}
+/**/
+.videoContainer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.logovideo{
+ width: 100%;
+}
+/*booth page css strat here*/
+.booth_link{
+    display: block;
+     text-align: center;
+    text-decoration: none!important;
+    position: relative;
+    margin: 30px 0;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+.booth_link h2{
+    font-size: 22px;
+    color: #003F88;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 20px 0;
+    box-sizing: border-box;
+    font-family: 'Pragati Narrow';
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.booth_link:hover .image {
+ transform: scale(1.3);
+  transition: .7s ease;
+}
+.top{
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.top a{
+    display: block;
+    width: 200px;
+    height: 190px;
+}
+.login_container{
+      position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+/**/
+.booth-page{
+
+}
+.booth_bg{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.logo_booths{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    z-index: 999;
+    width: 120px;
+}
+.univertitext{
+    position: absolute;
+    display: block;
+    font-size: 36px;
+    left: 15%;
+    top: 2%;
+    color:darkslateblue;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'FontAwesome';
+}
+.booth_heading{
+    text-align:left;
+    font-weight: 600;
+    font-size: 34px;
+    text-decoration: underline;
+    margin-top:25px;
+    color: darkblue;
+    text-transform: uppercase;
+}
+.option_text{
+    text-align: center;
+    font-size: 36px;
+    text-transform: capitalize;
+}
+.booth_brandin_logo{
+    width: 150px;
+}
+
+.exibation_slider{
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    width: 300px;
+}
+

@@ -1,0 +1,183 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BoothMasterPage.master.cs" Inherits="university_AllBooth_BoothMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+       <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0" />
+<title>QStudy</title>
+<!-- Libraries CSS -->
+                                                                                                       
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+   <link href="css/styleBooth.css" type="text/css" rel="stylesheet">
+   <link href="css/all.css" type="text/css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div class="booth_bgbanner">
+      <div class="booth_layar" style="background-color:rgba(0,0,0,0.4); height:100vh;">
+    <div class="container-fluid">
+        <div class="row">
+<header class="main-header light">
+    <div class="logo">
+        <img src="img/logo.png" alt="logo">
+    </div>
+    <div class="nav">
+        <div class="nav-right">
+           
+               <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                   <%--<ul class="navright_menu">
+                <li class="next_booth"><a href="#">Prev</a></li>
+                <li class="next_booth"><a href="#">Next</a></li>
+                       </ul>--%>
+        </asp:ContentPlaceHolder>
+            
+        </div>
+    </div>
+</header>
+</div>   
+</div>
+    <%--<div class="container-fluid" style="background-color:rgba(0,0,0,0.5);">--%>
+    <div class="container-fluid">
+    <div class="row">
+     <form id="form1" runat="server">
+<%--    <div>--%>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+<%--    </div>--%>
+   </form>
+        <section style="display:none;">
+  <ul id="services"class="uniboothpage">
+     <li>
+        <a href="#" class="language">
+        <i class="fa fa-language" aria-hidden="true"></i>
+         <div class="dock_title">Choose Language</div>
+        </a>
+    </li>
+     <li>
+       <a href="../../auditorium.html" class="auditorium">
+        <i class="fa fa-file-video-o" aria-hidden="true"></i>
+        <div class="dock_title">Auditorium</div>
+        </a>
+    </li>
+    <li>
+      <a href="#" class="caht">
+         <i class="fa fa-commenting-o" aria-hidden="true"></i>
+        <div class="dock_title">Chat</div>
+        </a>
+    </li>
+    <li>
+    <a href="../../lobby.html" class="reception">
+      <i class="fa fa-handshake-o" aria-hidden="true"></i>
+        <div class="dock_title">Lobby</div>
+        </a>
+    </li>
+     <li>
+      <a href="#" class="help">
+         <i class="fa fa-question-circle" aria-hidden="true"></i>
+        <div class="dock_title">Help Desk Chat</div>
+        </a>
+    </li>
+     <li>
+      <a href="../../exhibition.html" class="expo">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <div class="dock_title">Universities</div>
+        </a>
+    </li>
+        <li>
+      <a href="https://web.whatsapp.com/" class="contact">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <div class="dock_title">Help Desk WhatsApp</div>
+        </a>
+    </li>
+  </ul>
+   
+</section>
+        
+    </div>
+<%--<div class="whatsapp_icon">
+  <img src="img/whatsapp.png"  alt="#">
+</div>--%>
+
+
+
+<asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+</div>
+        </div>
+        </div>
+    <script>
+$(document).ready(function(){
+    $("#myBtn").click(function () {
+        $("#myModal1").fadeOut();
+        $("#myModal2").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal").slideDown(1000);
+    });
+  $(".closebtn").click(function(){
+    $("#myModal").slideUp();
+  });
+});
+
+$(document).ready(function(){
+    $("#myBtn1").click(function () {
+        $("#myModal2").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal1").fadeIn();
+    });
+  $(".closebtn").click(function(){
+    $("#myModal1").fadeOut();
+  });
+});
+$(document).ready(function(){
+    $("#myBtn2").click(function () {
+        $("#myModal1").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal2").show();
+    });
+  $(".closebtn").click(function(){
+    $("#myModal2").hide();
+  });
+});
+$(document).ready(function(){
+    $("#myBtn3").click(function () {
+        $("#myModal1").fadeOut();
+        $("#myModal2").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal3").show();
+    });
+  $(".closebtn").click(function(){
+    $("#myModal3").hide();
+  });
+});
+$(document).ready(function () {
+    $("#myBtn4").click(function () {
+        $("#myModal1").fadeOut();
+        $("#myModal2").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").show();
+       
+      
+    });
+    $(".closebtn").click(function () {
+        $("#myModal4").hide();
+    });
+});
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BoothMasterPage.master.cs" Inherits="UniversityBooth_BoothMasterPage" %>
+<%@ Register Src="~/UserControl/ucDoc.ascx" TagName="docMenu" TagPrefix="uc" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0" />
+<title>QStudy</title>
+<!-- Libraries CSS -->
+                                                                                                       
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+   <link href="css/styleBooth.css" type="text/css" rel="stylesheet">
+   <link href="css/all.css" type="text/css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body  >
+   
+    <div class="booth_bgbanner">
+      <div class="booth_layar" style="height:100vh;">
+    <div class="container-fluid">
+        <div class="row">
+<header class="main-header light">
+    <div class="logo">
+        <img src="img/logo.png" alt="logo">
+    </div>
+    <div class="nav">
+        <div class="nav-right">
+           
+               <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                   <%--<ul class="navright_menu">
+                <li class="next_booth"><a href="#">Prev</a></li>
+                <li class="next_booth"><a href="#">Next</a></li>
+                       </ul>--%>
+        </asp:ContentPlaceHolder>
+            
+        </div>
+    </div>
+</header>
+</div>   
+</div>
+    <%--<div class="container-fluid" style="background-color:rgba(0,0,0,0.5);">--%>
+    <div class="container-fluid">
+                
+
+    <div class="row">
+     <form id="form1" runat="server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+   </form>
+        
+
+     
+        
+    </div>
+<%--<div class="whatsapp_icon">
+  <img src="img/whatsapp.png"  alt="#">
+</div>--%>
+
+
+
+<asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+</div>
+        </div>
+        </div>
+     <uc:docMenu ID="doc" runat="server" />
+    <script>
+$(document).ready(function(){
+    $("#myBtn").click(function () {
+        $("#ifrmmodify").attr("src", "");
+        $("#ifrmRoom").attr("src", "");
+        $("#myModal1").fadeOut();
+        $("#myModal2").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal5").fadeOut();
+        $("#myModal").slideDown(1000);
+    });
+  $(".closebtn").click(function(){
+      $("#myModal").slideUp();
+    
+  });
+});
+
+$(document).ready(function(){
+    $("#myBtn1").click(function () {
+        $("#ifrmmodify").attr("src", "");
+        $("#ifrmRoom").attr("src", "");
+        $("#myModal").fadeOut();
+        $("#myModal2").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal5").fadeOut();
+        $("#myModal1").slideDown(1000);
+       
+    });
+  $(".closebtn").click(function(){
+      $("#myModal1").slideUp();
+  });
+});
+$(document).ready(function(){
+    $("#myBtn2").click(function () {
+        $("#ifrmmodify").attr("src", "");
+        $("#ifrmRoom").attr("src", "");
+        $("#myModal").fadeOut();
+        $("#myModal1").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal2").slideDown(1000);
+        $("#myModal5").fadeOut();
+    });
+  $(".closebtn").click(function(){
+      $("#myModal2").slideUp();
+  });
+});
+$(document).ready(function(){
+    $("#myBtn3").click(function () {
+        $("#ifrmmodify").attr("src", "");
+        $("#ifrmRoom").attr("src", "");
+        $("#myModal").fadeOut();
+        $("#myModal1").fadeOut();
+        //$("#myModal2").fadeOut();
+        $("#myModal4").fadeOut();
+        $("#myModal2").slideDown(1000);
+        $("#myModal5").fadeOut();
+    });
+  $(".closebtn").click(function(){
+      $("#myModal3").slideUp();
+  });
+});
+$(document).ready(function () {
+    $("#myBtn4").click(function () {
+        $("#myModal").fadeOut();
+        $("#myModal1").fadeOut();
+        $("#myModal2").fadeOut();
+        $("#myModal3").fadeOut();
+        $("#myModal4").slideDown(1000);
+        $("#myModal5").fadeOut();
+       
+      
+    });
+    $(".closebtn1").click(function () {
+        $("#myModal5").fadeOut();
+        $("#myModal4").slideUp();
+       // location.reload();
+        $("#ifrmmodify").attr("src", "");
+        $("#ifrmRoom").attr("src", "");
+        
+    });
+
+});
+        $(document).ready(function () {
+            $("#myBtn5").click(function () {
+                $("#myModal").fadeOut();
+            $("#myModal1").fadeOut();
+            $("#myModal2").fadeOut();
+            $("#myModal3").fadeOut();
+            $("#myModal4").fadeOut();
+            $("#myModal5").slideDown(1000);
+
+
+        });
+        $(".closebtn1").click(function () {
+            $("#myModal4").fadeOut();
+            $("#myModal5").slideUp();
+            // location.reload();
+            $("#ifrmmodify").attr("src", "");
+            $("#ifrmRoom").attr("src", "");
+
+        });
+    });
+        
+    </script>
+  <style>
+      .closebtn1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: block;
+}
+  </style>  
+  
+<%--    <script>
+        Tawk_API.onLoad = function () {
+            Tawk_API.maximize();
+        };
+
+    </script>--%>
+ 
+</body>
+</html>
